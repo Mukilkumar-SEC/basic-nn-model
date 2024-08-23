@@ -46,21 +46,22 @@ import pandas as pd
 auth.authenticate_user()
 creds,_=default()
 gc=gspread.authorize(creds)
-worksheet = gc.open('Mydata').sheet1
+worksheet = gc.open('experiment1').sheet1
 data = worksheet.get_all_values()
 ```
 ## Construct Data frame using Rows and columns
 ```py
-dataset1=pd.DataFrame(data[1:], columns=data[0])
-dataset1=dataset1.astype({'x':'float'})
-dataset1=dataset1.astype({'y':'float'})
-dataset1.head(20)
-X=df[['x']].values
-Y=df[['y']].values
+df = pd.DataFrame(rows[1:], columns=rows[0])
+df = df.astype({'input':'float'})
+df = df.astype({'output':'float'})
+df.head()
+x=df[['input']].values
+y=df[['output']].values
+x
 ```
 ## Split the testing and training data
 ```py
-X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.33,random_state=33)
+X_train,X_test,y_train,y_test=train_test_split(x,y,test_size=0.33,random_state=33)
 Scaler = MinMaxScaler()
 Scaler.fit(X_train)
 X_train1=Scaler.transform(X_train)
