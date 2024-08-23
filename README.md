@@ -83,7 +83,7 @@ loss_df.plot()
 ```py
 X_test1=Scaler.transform(X_test)
 ai_brain.evaluate(X_test1,y_test)
-X_n1=[[19]]
+X_n1=[[5]]
 X_n1_1 = Scaler.transform(X_n1)
 ai_brain.predict(X_n1_1)
 ```
