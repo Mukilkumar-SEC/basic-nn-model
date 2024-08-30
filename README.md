@@ -12,7 +12,7 @@ To develop a neural network regression model for the given dataset.
 3) First import the libraries which we will going to use and Import the dataset and check the types of the columns and Now build your training and test set from the dataset Here we are making the neural network 3 hidden layer with activation layer as relu and with their nodes in them. Now we will fit our dataset and then predict the value.
 
 ## Neural Network Model
-![image](https://github.com/user-attachments/assets/1ed70f24-ef2d-4c4a-b2bc-e7369249edef)
+![image](https://github.com/user-attachments/assets/51be0311-d6ca-45aa-b1b6-22fc68003e3e)
 
 ## DESIGN STEPS
 ### STEP 1:Loading the dataset
